@@ -132,7 +132,6 @@ def is_word_guessed(secret_word, letters_guessed):
     #         current_word += letter + ' '
     #     else:
     #         current_word += ' _ '
-    print(all(letra in letters_guessed for letra in secret_word))
     return all(letra in letters_guessed for letra in secret_word)
 
 
@@ -214,8 +213,10 @@ def hangman(secret_word):
 
         # Mostra as letras disponíveis
         available_letters = get_available_letters(letters_guessed)
+        print("Letras disponíveis:")
         print(available_letters)
         # Imprime a palavra secreta
+        print("Palavra secreta:")
         print(get_guessed_word(secret_word,letters_guessed))
 
         # Usado para sinalizar a entrada correta do usuário
